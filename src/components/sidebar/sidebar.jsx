@@ -11,12 +11,17 @@ import * as SharedStyle from '../../shared-style';
 import If from '../../utils/react-if';
 
 const STYLE = {
-  backgroundColor: SharedStyle.PRIMARY_COLOR.main,
+  backgroundColor: '#fff',
   display: 'block',
   overflowY: 'auto',
   overflowX: 'hidden',
-  paddingBottom: '20px'
+  paddingBottom: '20px',
+  color: '#FFF'
 };
+
+const imgStyle = {
+  transform: 'translate(25%, -100%)'
+}
 
 const sortButtonsCb = (a, b) => {
   if (a.index === undefined || a.index === null) {
@@ -46,10 +51,10 @@ export default function Sidebar({ state, width, height, sidebarComponents }) {
     selected.areas.size > 1 ||
     selected.lines.size + selected.items.size + selected.holes.size + selected.areas.size > 1;
 
-  let selectedGroup = state.getIn(['scene', 'groups']).findEntry( g => g.get('selected') );
+  let selectedGroup = state.getIn(['scene', 'groups']).findEntry(g => g.get('selected'));
 
   let sorter = [
-    { index: 0, condition: true, dom: <PanelGuides state={state}/> },
+    { index: 0, condition: true, dom: <PanelGuides state={state} /> },
     { index: 1, condition: true, dom: <PanelLayers state={state} /> },
     { index: 2, condition: true, dom: <PanelLayerElements mode={state.mode} layers={state.scene.layers} selectedLayer={state.scene.selectedLayer} /> },
     { index: 3, condition: true, dom: <PanelGroups mode={state.mode} groups={state.scene.groups} layers={state.scene.layers} /> },
@@ -72,14 +77,22 @@ export default function Sidebar({ state, width, height, sidebarComponents }) {
   }));
 
   return (
-    <aside
-      style={{ width, height, ...STYLE }}
-      onKeyDown={event => event.stopPropagation()}
-      onKeyUp={event => event.stopPropagation()}
-      className="sidebar"
-    >
-      {sorter.sort(sortButtonsCb).map(mapButtonsCb)}
-    </aside>
+    <div>
+      <aside
+        style={{ width, height, ...STYLE }}
+        onKeyDown={event => event.stopPropagation()}
+        onKeyUp={event => event.stopPropagation()}
+        className="sidebar"
+      >
+        {sorter.sort(sortButtonsCb).map(mapButtonsCb)}
+      </aside>
+      <div style={imgStyle}>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0041/1382/5910/files/mumuso-logo-2018_155x@2x.png?v=1536598627"
+
+        />
+      </div>
+    </div>
   );
 }
 

@@ -29,7 +29,7 @@ export const MATERIAL_COLORS = {
 };
 
 export const PRIMARY_COLOR = {
-  main: '#46B989',
+  main: '#01774B',
   alt: '#46B989',
   icon: '#fff',
   border: '1px solid #555',

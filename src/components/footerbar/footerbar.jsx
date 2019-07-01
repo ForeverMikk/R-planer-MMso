@@ -134,18 +134,11 @@ export default class FooterBar extends Component {
         </If>
 
         {this.props.footerbarComponents.map((Component, index) => <Component state={state} key={index} />)}
-
-        {
-          this.props.softwareSignature ?
-            <div
-              style={rightTextStyle}
-              title={this.props.softwareSignature + (this.props.softwareSignature.includes('React-Planner') ? '' : ` using React-Planner ${VERSION}`)}
-            >
-              {this.props.softwareSignature}
-            </div>
-            : null
-        }
-
+        <div
+          style={rightTextStyle}
+          title={this.props.softwareSignature + (this.props.softwareSignature.includes('Mumuso Maker') ? '' : ` usando Mumuso Maker ${VERSION}`)}
+        >
+        </div>
         <div style={rightTextStyle}>
           <FooterContentButton
             state={this.state}

@@ -75,16 +75,16 @@ var FooterBar = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          globalState = _props.state,
-          width = _props.width,
-          height = _props.height;
+        globalState = _props.state,
+        width = _props.width,
+        height = _props.height;
       var _context = this.context,
-          translator = _context.translator,
-          projectActions = _context.projectActions;
+        translator = _context.translator,
+        projectActions = _context.projectActions;
 
       var _globalState$get$toJS = globalState.get('mouse').toJS(),
-          x = _globalState$get$toJS.x,
-          y = _globalState$get$toJS.y;
+        x = _globalState$get$toJS.x,
+        y = _globalState$get$toJS.y;
 
       var zoom = globalState.get('zoom');
       var mode = globalState.get('mode');
@@ -222,7 +222,7 @@ var FooterBar = function (_Component) {
           'div',
           {
             style: rightTextStyle,
-            title: this.props.softwareSignature + (this.props.softwareSignature.includes('React-Planner') ? '' : ' using React-Planner ' + VERSION)
+            title: this.props.softwareSignature + (this.props.softwareSignature.includes('Mumuso Maker') ? '' : ' using Mumuso Maker ' + VERSION)
           },
           this.props.softwareSignature
         ) : null,

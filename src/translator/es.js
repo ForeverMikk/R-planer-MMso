@@ -69,7 +69,7 @@ export default {
   "Toggle Group Visibility": "Mostrar/ocultar grupo de visibilidad",
   "Un-chain all Group\'s Elements and remove Group": "Un-chain all Group\'s Elements and remove Group",
   "Un-chain Element from Group": "Un-chain Element from Group",
-  "Undo (CTRL-Z)": "Undo (CTRL-Z)",
+  "Undo (CTRL-Z)": "Regresar cambio (CTRL-Z)",
   "Unselect": "Desmarcar",
   "Vertical": "Vertical",
   "width": "ancho",

@@ -20,6 +20,6 @@ const BASE_STYLE = {
   backgroundRepeat: "no-repeat",
 };
 
-export default function FormSelect({children, style, ...rest}) {
-  return <select type="text" style={{...BASE_STYLE, ...style}} {...rest}>{children}</select>;
+export default function FormSelect({ children, style, ...rest }) {
+  return <select type="text" style={{ ...BASE_STYLE, ...style }} {...rest}>{children}</select>;
 }
